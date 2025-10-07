@@ -1,0 +1,219 @@
+:root {
+  --accent-color: #3177b7;
+  --accent-color-brighter: color-mix(in srgb, var(--accent-color) 70%, rgb(12, 200, 247) 30%);
+  --cv-accent-color: color-mix(in srgb, var(--accent-color) 70%, rgb(0, 0, 0) 20%);
+  --card-border-radius: 20px;
+  --main-color:linear-gradient(to bottom right, #ffffff, #e9eff6);
+  --second-color:radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgb(247, 249, 251) 100%);
+
+}
+
+
+
+.icard1, .icard2, .icard3, .icard4, .icard5, .icard6{
+    background:var(--second-color);
+    border-radius: var(--card-border-radius);
+}
+.icard1:hover, .icard2:hover, .icard3:hover, .icard4:hover, .icard5:hover, .icard6:hover{
+    box-shadow: 0 0px 25px rgba(0, 0, 0, 0.053);
+}
+
+.about{
+    background: var(--main-color);
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+.aboutmd{
+    padding-top: 3rem;
+}
+
+#research{
+    background-color: white;
+    padding-top: 35px;
+    padding-bottom: 55px;
+
+}
+#projects{
+    background: var(--main-color);
+    padding-top: 35px;
+    padding-bottom: 55px
+}
+#skills{
+    background-color: white;
+    padding-top: 35px;
+    padding-bottom: 55px
+}
+#contact{
+    background: linear-gradient(to bottom right, #ffffff, #e9eff6);
+    padding-top: 35px;
+    padding-bottom: 55px
+}
+.card{
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    border-width: 1px;
+}
+.card:hover {
+        box-shadow: 0 0px 25px rgba(0, 0, 0, 0.053);
+            scale: 1.02;
+}
+
+.text-gray-600 {
+  font-size: 15px;
+}
+
+.headr {
+  font-size: 17px;
+  line-height: 1.75rem;
+}
+
+.textinfoc{
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
+.icon {
+  color: var(--accent-color-brighter);
+  font-size: 24px;
+  line-height: 2.25rem;
+}
+.colored-text {
+  color: var(--accent-color);
+  font-size: 15px;
+}
+.colored-text-skill {
+  color: var(--accent-color);
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #f0f4f9;
+}
+.tags{
+    margin: 30px;
+}
+.colored-text-skill:hover {
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.053);
+}
+
+.nav-link:hover{
+    color:var(--accent-color);
+    font-weight: 600;
+}
+
+.section-title {
+  padding-bottom: 15px;
+}
+
+.sbutton{
+      background-color: var(--accent-color);
+}
+.sbutton:hover {
+      background-color: var(--accent-color-brighter);
+      box-shadow: 0 0px 20px rgba(0, 0, 0, 0.14);
+}
+.sicon:hover{
+    color: var(--accent-color);
+}
+.ibutton1, #openCvModal{
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.ibutton1{
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+.ibutton1:hover{
+      background-color: var(--accent-color-brighter);
+      box-shadow: 0 0px 20px rgba(0, 0, 0, 0.14);
+}
+#openCvModal{
+    background-color: #e5e7eb;
+    color: #2e2e2e !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+#openCvModal:hover{
+      background-color: #c5c5c5;
+      box-shadow: 0 0px 20px rgba(0, 0, 0, 0.14);
+}
+
+
+.footer {
+  margin-bottom: 0.8rem;
+  margin-top: 10px;
+}
+.ax{
+    border-width: 5px;
+    border-color: #f8fafc;
+}
+
+
+.cvbox{
+    max-width: 900px;
+}
+
+#cvModal{
+    font-size: 14px !important;
+}
+
+h5 {
+    font-size: 14px !important;
+    font-weight:700 !important;
+    color: var(--cv-accent-color) !important;
+    padding-bottom: 5px !important;
+    border-width: 0px 0px 2px 0px;
+    border-bottom-color:var(--cv-accent-color);
+}
+
+ul{
+    padding-top: 12px !important;
+}
+strong{
+    font-weight: 600 !important;
+}
+
+/* Typewriter animation */
+.typewriter {
+  overflow: hidden; /* Ensures the text is hidden until "typed" */
+  border-right: .15em solid #4f46e5; /* Indigo cursor */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .05em;
+  animation:
+    typing 2.5s steps(20, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #4f46e5; }
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave-hand 2.5s ease-in-out 2;
+}
+
+
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60%, 100% { transform: rotate(0deg); }
+}
+
+#info{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
