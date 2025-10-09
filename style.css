@@ -10,13 +10,7 @@
 
 
 
-.icard1, .icard2, .icard3, .icard4, .icard5, .icard6{
-    background:var(--second-color);
-    border-radius: var(--card-border-radius);
-}
-.icard1:hover, .icard2:hover, .icard3:hover, .icard4:hover, .icard5:hover, .icard6:hover{
-    box-shadow: 0 0px 25px rgba(0, 0, 0, 0.053);
-}
+
 
 .about{
     background: var(--main-color);
@@ -48,16 +42,63 @@
     padding-top: 35px;
     padding-bottom: 55px
 }
+
+/*Hero Section ------------------------------------------------------------------------------*/
+.ax {
+    border-width: 5px;
+    border-color: #f8fafc;
+    transition: transform 0.3s ease; /* smooth transition */
+}
+.ax:hover {
+    transform: scale(1.5); /* use transform instead of scale property */
+}
+
+/*Interests Section ------------------------------------------------------------------------------*/
+.icard{
+    background:var(--second-color);
+    border-radius: var(--card-border-radius);
+}
+.icard:hover{
+    box-shadow: 0 0px 25px rgba(0, 0, 0, 0.053);
+}
+
+.imgicon{
+  width: 43px !important;
+  padding-top: 3px;
+}
+.imgicon1{
+  width: 52px !important;
+  padding-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Projects Section ------------------------------------------------------------------------------*/
 .card{
     background-color: white;
     border-radius: var(--card-border-radius);
     border-width: 1px;
+    border-color: #f4f4f4;
+    transition: transform 0.3s ease; /* smooth transition */
 }
 .card:hover {
         box-shadow: 0 0px 25px rgba(0, 0, 0, 0.053);
-            scale: 1.02;
+        transform: scale(1.03); /* use transform instead of scale property */
 }
-
+.viewall:hover{
+  color: var(--accent-color);
+}
 .text-gray-600 {
   font-size: 15px;
 }
@@ -103,13 +144,7 @@
   padding-bottom: 15px;
 }
 
-.sbutton{
-      background-color: var(--accent-color);
-}
-.sbutton:hover {
-      background-color: var(--accent-color-brighter);
-      box-shadow: 0 0px 20px rgba(0, 0, 0, 0.14);
-}
+
 .sicon:hover{
     color: var(--accent-color);
 }
@@ -142,35 +177,8 @@
   margin-bottom: 0.8rem;
   margin-top: 10px;
 }
-.ax{
-    border-width: 5px;
-    border-color: #f8fafc;
-}
 
 
-.cvbox{
-    max-width: 900px;
-}
-
-#cvModal{
-    font-size: 14px !important;
-}
-
-h5 {
-    font-size: 14px !important;
-    font-weight:700 !important;
-    color: var(--cv-accent-color) !important;
-    padding-bottom: 5px !important;
-    border-width: 0px 0px 2px 0px;
-    border-bottom-color:var(--cv-accent-color);
-}
-
-ul{
-    padding-top: 12px !important;
-}
-strong{
-    font-weight: 600 !important;
-}
 
 /* Typewriter animation */
 .typewriter {
@@ -216,4 +224,62 @@ strong{
 #info{
     padding-top: 7rem;
     padding-bottom: 7rem;
+}
+
+
+
+/*Contact Section ------------------------------------------------------------------------------*/
+.field{
+  border-color: #e8e8e8;
+  border-width: 1px;
+}
+.field:focus{
+  border-color: var(--accent-color);
+  border-width: 1px;
+}
+input, textarea{
+  font-size: 14px !important;
+}
+.sbutton{
+      background-color: var(--accent-color);
+      font-size: 15px;
+}
+
+.sbutton:hover {
+      background-color: var(--accent-color-brighter);
+      box-shadow: 0 0px 20px rgba(0, 0, 0, 0.14);
+      font-size: 15px;
+}
+
+
+/*CV ------------------------------------------------------------------------------*/
+.cvbox{
+    max-width: 900px;
+}
+#cvModal{
+    font-size: 14px !important;
+}
+h5 {
+    font-size: 14px !important;
+    font-weight:700 !important;
+    color: var(--cv-accent-color) !important;
+    padding-bottom: 5px !important;
+    border-width: 0px 0px 2px 0px;
+    border-bottom-color:var(--cv-accent-color);
+}
+ul{
+    padding-top: 12px !important;
+}
+strong{
+    font-weight: 600 !important;
+}
+.cvname{
+  color: var(--cv-accent-color) !important;
+  font-size: 17px !important;
+  font-weight:700 !important;
+  margin-bottom: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+    border-width: 0px 0px 2px 0px;
+    border-bottom-color:var(--cv-accent-color);
 }
