@@ -62,25 +62,12 @@
     box-shadow: 0 0px 25px rgba(0, 0, 0, 0.053);
 }
 
-.imgicon{
-  width: 43px !important;
+.imgicon, .imgicon1{
+  width: 24px !important;
   padding-top: 3px;
+  min-width: 24px !important;
+  max-width: 24px !important;
 }
-.imgicon1{
-  width: 52px !important;
-  padding-top: 3px;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
