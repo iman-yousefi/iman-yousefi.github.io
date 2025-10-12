@@ -49,10 +49,19 @@
     border-color: #f8fafc;
     transition: transform 0.3s ease; /* smooth transition */
 }
-.ax:hover {
-    transform: scale(1.5); /* use transform instead of scale property */
+@media (min-width: 768px) {
+  .ax {
+      transition: transform 0.3s ease; /* smooth transition */
+  }
+  .ax:hover {
+      transform: scale(1.5); /* use transform instead of scale property */
+  }
 }
-
+@media (max-width: 768px) {
+  .ax{
+    scale: 1.4;
+  }
+}
 /*Interests Section ------------------------------------------------------------------------------*/
 .icard{
     background:var(--second-color);
@@ -115,9 +124,13 @@
   font-weight: 600;
   background-color: #f0f4f9;
 }
+
 .tags{
-    margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
+
+
 .colored-text-skill:hover {
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.053);
 }
@@ -267,6 +280,11 @@ strong{
   margin-bottom: 15px;
   padding-top: 3px;
   padding-bottom: 3px;
-    border-width: 0px 0px 2px 0px;
-    border-bottom-color:var(--cv-accent-color);
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f0f4f9;
 }
+
+.cvindent{
+    padding-left: 14px;
+  }

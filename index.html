@@ -54,6 +54,11 @@
     <!-- Header & Navigation -->
     <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 md:px-24 py-4 flex justify-between items-center">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl text-gray-600"></i>
+            </button>
+            
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#research" class="nav-link">Research</a>
@@ -62,15 +67,11 @@
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <!-- Social Icons -->
-            <div class="hidden md:flex items-center space-x-6">
+            <div class="flex items-center space-x-6">
                 <a href="mailto:imanyouseefi@gmail.com" aria-label="Email" class="sicon text-gray-500 hover:icon transition duration-300"><i class="fas fa-envelope fa-lg"></i></a>
                 <a href="https://github.com/iman-yousefi" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="sicon text-gray-500 transition duration-300"><i class="fab fa-github fa-lg"></i></a>
                 <a href="https://www.linkedin.com/in/imanyousefii/" aria-label="LinkedIn" class="sicon text-gray-500 transition duration-300"><i class="fab fa-linkedin fa-lg"></i></a>
             </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden">
-                <i class="fas fa-bars text-2xl text-gray-600"></i>
-            </button>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
@@ -79,11 +80,6 @@
             <a href="#projects" class="block nav-link">Projects</a>
             <a href="#skills" class="block nav-link">Skills</a>
             <a href="#contact" class="block nav-link">Contact</a>
-            <div class="flex items-center space-x-6 pt-4 border-t mt-4">
-                <a href="mailto:imanyouseefi@gmail.com" aria-label="Email" class="sicon text-gray-500 transition duration-300"><i class="fas fa-envelope fa-lg"></i></a>
-                <a href="https://github.com/iman-yousefi" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="sicon text-gray-500 transition duration-300"><i class="fab fa-github fa-lg"></i></a>
-                <a href="https://www.linkedin.com/in/imanyousefii/" aria-label="LinkedIn" class="sicon text-gray-500 transition duration-300"><i class="fab fa-linkedin fa-lg"></i></a>
-            </div>
         </div>
     </header>
 
@@ -159,8 +155,8 @@
                             <img src="asset/ic4.png" class="imgicon1">
                         </div>
                         <div>
-                            <h3 class="headr font-bold mb-2 text-gray-800">Computer Vision & Signal Processing</h3>
-                            <p class="text-gray-600">Applying advanced visual and signal analysis methods to detect, segment, and classify medical images for early disease diagnosis and precision healthcare.</p>
+                            <h3 class="headr font-bold mb-2 text-gray-800">Biomedical Image & Signal Processing</h3>
+                            <p class="text-gray-600">Applying advanced methods to analyze medical images and biosignals for early diagnosis and health monitoring.</p>
                         </div>
                     </div>
                     
@@ -225,26 +221,26 @@
             <div class="container mx-auto px-6 md:px-24">
                 <h2 class="section-title mb-5">My Skills</h2>
                 <div class="max-w-5xl mx-auto">
-                    <div class="tags flex flex-wrap justify-center gap-4">
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Python</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">C++</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">MATLAB</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Embedded C</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Machine Learning</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Signal Processing</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Computer Vision</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">PyTorch & TensorFlow</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Scikit-learn</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">OpenCV</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Numpy</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Pandas</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">BCI Frameworks</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Microcontroller</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Arduino</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Electronics Engineering</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Latex</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Git & GitHub</span>
-                        <span class="inline-flex items-center colored-text-skill px-4 py-1.5 md:py-2 rounded-full">Html & CSS</span>
+                    <div class="tags flex flex-wrap justify-center md:gap-4 gap-3">
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Python</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">C++</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">MATLAB</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Embedded C</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Machine Learning</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Signal Processing</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Computer Vision</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">PyTorch & TensorFlow</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Scikit-learn</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">OpenCV</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Numpy</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Pandas</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">BCI Frameworks</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Microcontroller</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Arduino</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Electronics Engineering</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Latex</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Git & GitHub</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Html & CSS</span>
                     </div>
                 </div>
             </div>
@@ -291,9 +287,9 @@
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center space-x-6 footer">
+                <a href="mailto:imanyouseefi@gmail.com" class="text-gray-400 hover:text-white transition duration-300"><i class="fas fa-envelope fa-2x"></i></a>
                 <a href="https://github.com/iman-yousefi" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-github fa-2x"></i></a>
                 <a href="https://www.linkedin.com/in/imanyousefii/" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="mailto:imanyouseefi@gmail.com" class="text-gray-400 hover:text-white transition duration-300"><i class="fas fa-envelope fa-2x"></i></a>
             </div>
             <p class="text-gray-400">&copy; 2025 Iman Yousefi. All Rights Reserved.</p>
         </div>
@@ -333,7 +329,7 @@
             
             <!-- CV Content -->
             <h5 id="education">Education</h5>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc cvindent text-gray-700 space-y-2">
                 <li><strong>Master of Artificial Intelligence and Robotics Engineering</strong> | Sep 2023 - Present
                 <p>Islamic Azad University Tehran North Branch | Tehran, Iran</p>
                 <p>Grade<strong>:</strong> 17.78/20 (≈ <strong>GPA: 3.8 /4</strong>)</p>
@@ -346,21 +342,21 @@
             <br>
 
                 <h5 id="research-interests">Research Interests</h5>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc cvindent text-gray-700 space-y-2">
                 <li>Machine Learning & Deep Learning</li>
                 <li>Artificial Intelligence for Healthcare</li>
                 <li>Brain-Computer Interfaces (BCI)</li>
-                <li>Computer Vision & Signal Processing</li>
+                <li>Biomedical Image & Signal Processing</li>
             </ul>
             <br>
             <h5 id="research-projects">Research Projects</h5>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc cvindent text-gray-700 space-y-2">
             <li><strong>Comparative Analysis of Deep Learning Models and Feature Extraction Techniques for Motor Imagery EEG Classification</strong> (in progress)</li>
             </ul>
             <br>
 
             <h5 id="experiences">Experiences</h5>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc cvindent text-gray-700 space-y-2">
             <li><strong>Medical Equipment Engineer, Farsun Ara Co. (Part-time)</strong> | Jul 2020 – Present
             <p>Assembled and calibrated Electroconvulsive therapy (ECT) devices.</p></li>
             <li><strong>IT Support Assistant &amp; Front Desk Receptionist, Fardis Hotel</strong> | Dec 2021 – Sep 2023
@@ -371,7 +367,7 @@
             <br>
 
             <h5 id="academic-projects">Academic Projects</h5>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc cvindent text-gray-700 space-y-2">
             <li>EEG Motor Imagery Classification. | Jun 2025</li>
             <li>A motivational chatbot trained on the Ted Lasso Series script dialogues. | Feb 2025</li>
             <li>Text classification using BERT &amp; 20newsgroup dataset. | Jan 2025</li>
@@ -382,7 +378,7 @@
             <br>
 
             <h5 id="skillss">Skills</h5>
-            <ul class="list-inside text-gray-700 space-y-2">
+            <ul class="text-gray-700 space-y-2">
             <li><strong>Programming &amp; Software:</strong> Python, C++, MATLAB, Embedded C, LaTeX, HTML, CSS, Git</li>
             <li><strong>Machine Learning &amp; AI:</strong> TensorFlow, PyTorch, Scikit-learn, NumPy, Pandas, OpenCV</li>
             <li><strong>Hardware &amp; Embedded Systems:</strong> Arduino, Atmega Microcontrollers</li>
@@ -391,22 +387,22 @@
             <br>
 
             <h5 id="certificates">Certificates</h5>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>TOEFL iBT (planned for Nov 2025)</li>
+            <ul class="list-disc cvindent text-gray-700 space-y-2">
+            <li>TOEFL iBT (planned for Dec 2025)</li>
             <li>Mathematics for Machine Learning | Coursera</li>
             <li>Web development using JQuery | Sololearn</li>
             </ul>
             <br>
 
             <h5 id="professional-memberships">Professional Memberships</h5>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc cvindent text-gray-700 space-y-2">
             <li>Artificial Intelligence Association, Islamic Azad University - Tehran North Branch</li>
             <li>Former Member, National Full-Contact Team</li>
             </ul>
             <br>
 
             <h5 id="hobbies">Hobbies</h5>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc cvindent text-gray-700 space-y-2">
             <li>Playing guitar, weight training, board games, and watching tech and science documentaries.</li>
             </ul>
         </div>
