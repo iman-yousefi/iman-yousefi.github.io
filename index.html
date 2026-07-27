@@ -17,13 +17,14 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+        
         /* Custom styles */
         body {
             font-family: 'Exo 2', sans-serif;
             background-color: #f8fafc; /* A light gray background */
         }
         .section-title {
-            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center;
+            @apply text-3xl md:text-4xl font-bold headtext mb-8 text-center;
         }
         .card {
             @apply bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out;
@@ -49,14 +50,14 @@
 
 
 
-<body class="text-gray-700">
+<body class="subtext">
 
     <!-- Header & Navigation -->
-    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 md:px-24 py-4 flex justify-between items-center">
+    <header id="header" class="sticky top-6 z-50 px-5 md:px-6 relative">
+        <nav class="navbar-box px-6 py-4 flex justify-between items-center">
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden">
-                <i class="fas fa-bars text-2xl text-gray-600"></i>
+                <i class="fas fa-bars text-2xl subtext"></i>
             </button>
             
             <div class="hidden md:flex items-center space-x-8">
@@ -71,10 +72,13 @@
                 <a href="mailto:imanyouseefi@gmail.com" aria-label="Email" class="sicon text-gray-500 hover:icon transition duration-300"><i class="fas fa-envelope fa-lg"></i></a>
                 <a href="https://github.com/iman-yousefi" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="sicon text-gray-500 transition duration-300"><i class="fab fa-github fa-lg"></i></a>
                 <a href="https://www.linkedin.com/in/imanyousefii/" aria-label="LinkedIn" class="sicon text-gray-500 transition duration-300"><i class="fab fa-linkedin fa-lg"></i></a>
+                <button id="theme-toggle" type="button" aria-label="Toggle theme" class="theme-toggle sicon text-gray-500 transition duration-300">
+                    <i id="theme-toggle-icon" class="fas fa-moon fa-lg"></i>
+                </button>
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+        <div id="mobile-menu" class="navbar-box-menu mobile-menu-collapsible absolute left-0 right-0 top-full mt-2 z-50 md:hidden px-6 pb-4 space-y-2">
             <a href="#about" class="block nav-link">About</a>
             <a href="#research" class="block nav-link">Research</a>
             <a href="#projects" class="block nav-link">Projects</a>
@@ -88,20 +92,22 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section id="about" class="md:py-28 py-12 bg-white about aboutmd">
-            <div class="container mx-auto px-6 md:px-24 flex flex-col md:flex-row items-center justify-center gap-12">
+        <section id="about" class="about aboutmd px-6">
+            <div class="hero mx-auto px-6 md:px-24 flex flex-col md:flex-row items-center justify-center gap-12">
                 <!-- Left: Profile Image -->
                 <div class="flex-shrink-0">
-                    <img src="asset/pic.jpg" alt="Iman Yousefi" class="ax w-40 h-40 md:w-56 md:h-56 rounded-full shadow-lg mx-auto md:mx-0">
+                    <div class="ax-ring w-40 h-40 md:w-56 md:h-56 mx-auto md:mx-0">
+                        <img src="asset/picz.png" alt="Iman Yousefi" class="ax w-full h-full rounded-full">
+                    </div>
                 </div>
                 <!-- Right: Text -->
                 <div class="text-center md:text-left md:max-w-2xl">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Hi, I'm Iman <span class="wave">👋</span></h1>
+                    <h1 class="text-4xl md:text-5xl font-bold headtext hi-text mb-4">Hi, I'm Iman <span class="wave">👋</span></h1>
                     <p class="textinfo mb-6">
                     I’m a Master’s student in Artificial Intelligence with a background in Electronics Engineering and industry experience in medical devices. My research focuses on applying AI and computational methods to develop technologies that positively impact people’s lives.</p>
                     <div class="text-center md:text-left md:max-w-2xl">
                         <a href="#projects" class="ibutton1 px-4 py-2 transition duration-300">View My Work</a>
-                        <button id="openCvModal" class=" px-4 py-2 transition duration-300">View CV</button>
+                        <a href="asset/CV_Iman_Yousefi_W.pdf" target="_blank" rel="noopener noreferrer" id="openCvModal" class="px-4 py-2 transition duration-300 inline-block ring-1 ring-inset ring-gray-300 rounded hover:bg-gray-100">View CV</a>
                     </div>
                 </div>
             </div>
@@ -110,80 +116,96 @@
 
 
 
-        <!-- Research Interests Section -->
+<!-- Research Interests Section -->
         <section id="research" class="">
-            <div class="container mx-auto px-6 md:px-24">
+            <div class="section mx-auto">
                 <h2 class="section-title mb-5">Research Interests</h2>
-                <div class="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="mgrid max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
 
-                    <!-- Interest 1 -->
-                    <div class="icard -50 p-6  flex items-start space-x-4">
+                    <!-- Interest 1: Core AI / ML -->
+                    <div class="card -50 p-6 flex items-start space-x-4">
                         <div class="icon">
                             <img src="asset/ic1.png" class="imgicon1">
                         </div>
                         <div>
-                            <h3 class="headr font-bold mb-2 text-gray-800">Machine Learning & Deep Learning</h3>
-                            <p class="text-gray-600">Developing unified architectures that leverage shared representations to enhance generalization, efficiency, and performance across diverse learning tasks.</p>
+                            <h3 class="card-header-text font-bold mb-2 headtext">Multimodal Machine & Deep Learning</h3>
+                            <p class="subtext">Developing robust deep learning frameworks and representation methods to integrate complex, multi-source data.</p>
                         </div>
                     </div>
 
-                    <!-- Interest 2 -->
-                    <div class="icard p-6 flex items-start space-x-4">
-                        <div class="icon">
-                            <img src="asset/ic2.png" class="imgicon">
-                        </div>
-                        <div>
-                            <h3 class="headr font-bold mb-2 text-gray-800">Artificial Intelligence for Healthcare</h3>
-                            <p class="text-gray-600">Designing interpretable and data-efficient AI models for medical diagnosis, disease prediction, and clinical decision support systems.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Interest 3 -->
-                    <div class="icard  p-6  flex items-start space-x-4">
+
+
+                    <!-- Interest 2: BCI & Signals -->
+                    <div class="card p-6 flex items-start space-x-4">
                         <div class="icon">
                             <img src="asset/ic3.png" class="imgicon">
                         </div>
                         <div>
-                            <h3 class="headr font-bold mb-2 text-gray-800">Brain-Computer Interfaces (BCI)</h3>
-                            <p class="text-gray-600">Exploring AI-driven approaches to interpret neural signals and enable direct communication between the brain and external devices.</p>
+                            <h3 class="card-header-text font-bold mb-2 headtext">Brain-Computer Interfaces & Biosignals</h3>
+                            <p class="subtext">Applying signal processing and neural decoding algorithms to enable brain-computer communication and analyze physiological data.</p>
                         </div>
                     </div>
 
-                    <!-- Interest 4 -->
-                    <div class="icard -50 p-6  flex items-start space-x-4">
+
+                    <!-- Interest 4: Computer Vision & Medical Imaging -->
+                    <div class="card -50 p-6 flex items-start space-x-4">
                         <div class="icon">
                             <img src="asset/ic4.png" class="imgicon1">
                         </div>
                         <div>
-                            <h3 class="headr font-bold mb-2 text-gray-800">Biomedical Image & Signal Processing</h3>
-                            <p class="text-gray-600">Applying advanced methods to analyze medical images and biosignals for early diagnosis and health monitoring.</p>
+                            <h3 class="card-header-text font-bold mb-2 headtext">Medical Image Analysis & Computer Vision</h3>
+                            <p class="subtext">Designing computer vision models for biomedical image segmentation, automated clinical diagnosis, and pattern recognition.</p>
                         </div>
                     </div>
-                    
-                    
+
+                    <!-- Interest 3: NLP -->
+                    <div class="card p-6 flex items-start space-x-4">
+                        <div class="icon">
+                            <img src="asset/ic6.png" class="imgicon">
+                        </div>
+                        <div>
+                            <h3 class="card-header-text font-bold mb-2 headtext">Natural Language Processing & LLMs</h3>
+                            <p class="subtext">Leveraging language models for text understanding, information extraction, conversational systems, and healthcare applications.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+<!-- Pub -->
+<section id="research" class="">
+    <div class="section mx-auto">
+        <h2 class="section-title mb-5">Publications</h2>
+        
+        <!-- Grid container -->
+        <div class="mgrid max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
 
+            <!-- Single Publication Card -->
+            <div class="card p-6 flex items-start space-x-4">
+                <div>
+                    <h3 class="card-header-text font-bold mb-2 headtext">Multimodal Machine Learning Framework for Subject-Independent Sleep Apnea Detection</h3>
+                    <p class="subtext">Yousefi, I., Jabbaryzadeh, R., Sabeti, M., Taghavi, M., Moradi, E., & Boostani, R. (2026). Submitted to Medinformatics (Under Review).</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
         <!-- Projects Section -->
         <section id="projects" class="py-20">
-            <div class="container mx-auto px-6 md:px-24">
+            <div class="section mx-auto">
                 <div class="relative text-center mb-5">
-                <h2 class="section-title !text-left !mb-0">My Projects</h2>
-                <a href="https://github.com/iman-yousefi?tab=repositories" target="_blank" rel="noopener noreferrer" class="viewall absolute right-0 top-1/2 -translate-y-1/2 hidden md:block">
-                    View All
-                </a>
+                <h2 class="section-title !mb-0">My Projects</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="mgrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Project Card 1 -->
                 <div class="card">
                     <div class="p-6">
-                        <h3 class="headr font-bold mb-2 text-gray-800">EEG Motor Imagery Classification</h3>
-                        <p class="text-gray-600 mb-4">EEG motor imagery classification with region-level features and CSP using a custom deep learning model.</p>
+                        <h3 class="card-header-text font-bold mb-2 headtext">EEG Motor Imagery Classification</h3>
+                        <p class="subtext mb-4">EEG motor imagery classification with region-level features and CSP using a custom deep learning model.</p>
                         <a href="https://github.com/iman-yousefi/EEG-Motor-Imagery-Classification" class="colored-text font-semibold hover:underline">View on GitHub <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
@@ -191,8 +213,8 @@
                 <!-- Project Card 2 -->
                 <div class="card">
                     <div class="p-6">
-                        <h3 class="headr font-bold mb-2 text-gray-800">COVID-19 Detection Using CT Scans</h3>
-                        <p class="text-gray-600 mb-4">A CNN model built with Python/TensorFlow to classify chest CT images as COVID-19 positive or normal.</p>
+                        <h3 class="card-header-text font-bold mb-2 headtext">COVID-19 Detection Using CT Scans</h3>
+                        <p class="subtext mb-4">A CNN model built with Python/TensorFlow to classify chest CT images as COVID-19 positive or normal.</p>
                         <a href="https://github.com/iman-yousefi/Covid19-CTscan-Classification" class="colored-text font-semibold hover:underline">View on GitHub <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
@@ -200,8 +222,8 @@
                 <!-- Project Card 3 -->
                 <div class="card">
                     <div class="p-6">
-                        <h3 class="headr font-bold mb-2 text-gray-800">Ted Lasso GPT</h3>
-                        <p class="text-gray-600 mb-4">A motivational chatbot trained on Ted Lasso script dialogues.</p>
+                        <h3 class="card-header-text font-bold mb-2 headtext">Ted Lasso GPT</h3>
+                        <p class="subtext mb-4">A motivational chatbot trained on Ted Lasso script dialogues.</p>
                         <a href="https://github.com/iman-yousefi/Ted-Lasso-GPT" class="colored-text font-semibold hover:underline">View on GitHub <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
@@ -211,27 +233,34 @@
                     <a href="https://github.com/iman-yousefi?tab=repositories" target="_blank" rel="noopener noreferrer" class="colored-text font-semibold hover:underline">View All Projects</a>
                 </div>
             </div>
+
+            <!-- Desktop "View All" -->
+            <div class="mt-6 text-center hidden md:block">
+                <a href="https://github.com/iman-yousefi?tab=repositories" target="_blank" rel="noopener noreferrer" class="viewall hover:underline">View All Projects</a>
+            </div>
         </section>
 
 
 
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-white">
-            <div class="container mx-auto px-6 md:px-24">
+        <section id="skills" class="py-20">
+            <div class="mx-auto px-6">
                 <h2 class="section-title mb-5">My Skills</h2>
-                <div class="max-w-5xl mx-auto">
+                <div class="hero mx-auto">
                     <div class="tags flex flex-wrap justify-center md:gap-4 gap-3">
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Python</span>
-                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">C++</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">MATLAB</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Embedded C</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Machine Learning</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">SQL</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Signal Processing</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Computer Vision</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">PyTorch & TensorFlow</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Scikit-learn</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">OpenCV</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">MNE-Python</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">PyEDFlib</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Numpy</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Pandas</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">BCI Frameworks</span>
@@ -241,6 +270,10 @@
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Latex</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Git & GitHub</span>
                         <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">Html & CSS</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">WordPress</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">FastAPI</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">PostgreSQL</span>
+                        <span class="inline-flex items-center colored-text-skill px-3 md:px-4 py-1.5 md:py-2 rounded-full">SQLModel</span>
                     </div>
                 </div>
             </div>
@@ -253,22 +286,22 @@
         <section id="contact" class="py-20">
             <div class="container mx-auto px-6 md:px-24">
                 <h2 class="section-title mb-5">Get In Touch</h2>
-                <div class="max-w-2xl mx-auto">
-                    <p class="text-center text-gray-600 mb-8">
+                <div class="hero mx-auto">
+                    <p class="text-center subtext mb-8">
                         I'm always open to discussing new projects, research collaborations, or opportunities to apply my skills. Let's connect!
                     </p>
                     <form action="https://formspree.io/f/mnnzazqj" method="POST" class="space-y-4">
                         <div>
                             <label for="name" class="sr-only">Name</label>
-                            <input type="text" name="name" id="name" placeholder="Your Name" class="field w-full px-4 py-3 rounded-lg bg-white focus:bg-white focus:outline-none transition duration-300">
+                            <input type="text" name="name" id="name" placeholder="Your Name" class="field w-full px-4 py-3 rounded-lg focus:outline-none transition duration-300">
                         </div>
                         <div>
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Your Email" class="field w-full px-4 py-3 rounded-lg bg-white focus:bg-white focus:outline-none transition duration-300">
+                            <input type="email" name="email" id="email" placeholder="Your Email" class="field w-full px-4 py-3 rounded-lg focus:outline-none transition duration-300">
                         </div>
                         <div>
                             <label for="message" class="sr-only">Message</label>
-                            <textarea name="message" id="message" rows="5" placeholder="Your Message" class="field w-full px-4 py-3 rounded-lg bg-white focus:bg-white focus:outline-none transition duration-300"></textarea>
+                            <textarea name="message" id="message" rows="5" placeholder="Your Message" class="field w-full px-4 py-3 rounded-lg focus:outline-none transition duration-300"></textarea>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="sbutton text-white px-6 py-2 rounded-full transition duration-300">Send Message</button>
@@ -284,155 +317,241 @@
 
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4">
+    <footer class="foot text-white py-4">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center space-x-6 footer">
-                <a href="mailto:imanyouseefi@gmail.com" class="text-gray-400 hover:text-white transition duration-300"><i class="fas fa-envelope fa-2x"></i></a>
-                <a href="https://github.com/iman-yousefi" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-github fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/imanyousefii/" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="mailto:imanyouseefi@gmail.com" class="subtext ficon transition duration-300"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="https://github.com/iman-yousefi" target="_blank" rel="noopener noreferrer" class="subtext ficon transition duration-300"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/imanyousefii/" class="subtext ficon transition duration-300"><i class="fab fa-linkedin fa-2x"></i></a>
             </div>
-            <p class="text-gray-400">&copy; 2025 Iman Yousefi. All Rights Reserved.</p>
+            <p class="subtext"><button id="reset-eggs" type="button" class="inline p-0 m-0 bg-transparent border-0 subtext hover:underline" aria-label="Reset Easter eggs">&copy;</button> 2025 Iman Yousefi. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- Easter egg dots -->
+    <button class="egg egg-1" aria-label="Hidden object 1"></button>
+    <button class="egg egg-2" aria-label="Hidden object 2"></button>
+    <button class="egg egg-3" aria-label="Hidden object 3"></button>
+    <div id="egg-toast" class="egg-toast" role="status" aria-live="polite"></div>
+
     <script>
+        const header = document.getElementById('header');
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const icon = mobileMenuButton.querySelector('i');
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleIcon = document.getElementById('theme-toggle-icon');
+        const root = document.documentElement;
+        const themeKey = 'site-theme';
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const updateThemeToggleIcon = (theme) => {
+            if (!themeToggleIcon) return;
+            themeToggleIcon.classList.toggle('fa-moon', theme === 'dark');
+            themeToggleIcon.classList.toggle('fa-sun', theme === 'light');
+            if (themeToggle) {
+                themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+                themeToggle.setAttribute('title', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+            }
+        };
+
+        const applyTheme = (theme) => {
+            root.setAttribute('data-theme', theme);
+            updateThemeToggleIcon(theme);
+        };
+
+        const getInitialTheme = () => {
+            const saved = localStorage.getItem(themeKey);
+            if (saved === 'dark' || saved === 'light') return saved;
+            return mediaQuery.matches ? 'dark' : 'light';
+        };
+
+        applyTheme(getInitialTheme());
+
+        const handleSystemThemeChange = (event) => {
+            const saved = localStorage.getItem(themeKey);
+            if (saved === 'dark' || saved === 'light') return;
+            applyTheme(event.matches ? 'dark' : 'light');
+        };
+        if (typeof mediaQuery.addEventListener === 'function') {
+            mediaQuery.addEventListener('change', handleSystemThemeChange);
+        } else if (typeof mediaQuery.addListener === 'function') {
+            mediaQuery.addListener(handleSystemThemeChange);
+        }
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                const next = current === 'dark' ? 'light' : 'dark';
+                localStorage.setItem(themeKey, next);
+                applyTheme(next);
+            });
+        }
+        
+        const toggleHeaderShadow = () => {
+            header.classList.toggle('is-scrolled', window.scrollY > 0);
+        };
+        const syncMobileMenuMode = () => {
+            const isMenuOpen = mobileMenu.classList.contains('is-open');
+            const isAtTop = window.scrollY <= 8;
+
+            if (isMenuOpen && isAtTop) {
+                document.body.classList.add('menu-open-at-top');
+                document.body.style.setProperty('--mobile-menu-offset', `${mobileMenu.scrollHeight}px`);
+            } else {
+                document.body.classList.remove('menu-open-at-top');
+                document.body.style.removeProperty('--mobile-menu-offset');
+            }
+        };
+        toggleHeaderShadow();
+        window.addEventListener('scroll', () => {
+            toggleHeaderShadow();
+            syncMobileMenuMode();
+        }, { passive: true });
 
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times'); // toggles hamburger / close icon
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            syncMobileMenuMode();
+            icon.classList.toggle('fa-bars', !isOpen);
+            icon.classList.toggle('fa-times', isOpen);
         });
 
         document.querySelectorAll('#mobile-menu a.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('is-open');
+                syncMobileMenuMode();
                 icon.classList.add('fa-bars');
                 icon.classList.remove('fa-times');
             });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.remove('is-open');
+                syncMobileMenuMode();
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            } else {
+                syncMobileMenuMode();
+            }
         });
     </script>
 
 
 
-
-    <!-- CV Modal -->
-    <div id="cvModal"
-        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 overflow-y-auto">
-        <div class="bg-white rounded-2xl shadow-xl cvbox w-full mx-4 my-10 p-8 relative overflow-y-auto max-h-[90vh]">
-            <!-- Close button -->
-            <button id="closeCvModal" class="absolute top-0 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
-
-            <p class="cvname">Iman Yousefi</p>
-            
-            <!-- CV Content -->
-            <h5 id="education">Education</h5>
-            <ul class="list-disc cvindent text-gray-700 space-y-2">
-                <li><strong>Master of Artificial Intelligence and Robotics Engineering</strong> | Sep 2023 - Present
-                <p>Islamic Azad University Tehran North Branch | Tehran, Iran</p>
-                <p>Grade<strong>:</strong> 17.78/20 (≈ <strong>GPA: 3.8 /4</strong>)</p>
-                </li>
-                <li><strong>Bachelor of Electronics Engineering</strong> | Sep 2018 – Jul 2023
-                <p>Islamic Azad University Tehran North Branch | Tehran, Iran</p>
-                <p>Grade<strong>:</strong> 17.07/20 (≈ <strong>GPA: 3.6 /4</strong>)</p>
-                </li>
-                </ul>
-            <br>
-
-                <h5 id="research-interests">Research Interests</h5>
-            <ul class="list-disc cvindent text-gray-700 space-y-2">
-                <li>Machine Learning & Deep Learning</li>
-                <li>Artificial Intelligence for Healthcare</li>
-                <li>Brain-Computer Interfaces (BCI)</li>
-                <li>Biomedical Image & Signal Processing</li>
-            </ul>
-            <br>
-            <h5 id="research-projects">Research Projects</h5>
-            <ul class="list-disc cvindent text-gray-700 space-y-2">
-            <li><strong>Comparative Analysis of Deep Learning Models and Feature Extraction Techniques for Motor Imagery EEG Classification</strong> (in progress)</li>
-            </ul>
-            <br>
-
-            <h5 id="experiences">Experiences</h5>
-            <ul class="list-disc cvindent text-gray-700 space-y-2">
-            <li><strong>Medical Equipment Engineer, Farsun Ara Co. (Part-time)</strong> | Jul 2020 – Present
-            <p>Assembled and calibrated Electroconvulsive therapy (ECT) devices.</p></li>
-            <li><strong>IT Support Assistant &amp; Front Desk Receptionist, Fardis Hotel</strong> | Dec 2021 – Sep 2023
-            <p>Developed synchronization systems to improve software reliability and optimize front desk operations.</p></li>
-            <li><strong>Smartphone Repair Technician, ReStore Mobile Repair</strong> | Apr 2021 – Dec 2021
-            <p>Diagnosed and repaired smartphone hardware and software.</p></li>
-            </ul>
-            <br>
-
-            <h5 id="academic-projects">Academic Projects</h5>
-            <ul class="list-disc cvindent text-gray-700 space-y-2">
-            <li>EEG Motor Imagery Classification. | Jun 2025</li>
-            <li>A motivational chatbot trained on the Ted Lasso Series script dialogues. | Feb 2025</li>
-            <li>Text classification using BERT &amp; 20newsgroup dataset. | Jan 2025</li>
-            <li>Efficient deep multi-task learning structure for Covid-19 disease detection. | Aug 2024</li>
-            <li>Underwater object detection using deep learning. | Sep 2024</li>
-            <li>Transfer learning with deep convolutional neural network for automated detection of schizophrenia from EEG signals. | Feb 2024</li>
-            </ul>
-            <br>
-
-            <h5 id="skillss">Skills</h5>
-            <ul class="text-gray-700 space-y-2">
-            <li><strong>Programming &amp; Software:</strong> Python, C++, MATLAB, Embedded C, LaTeX, HTML, CSS, Git</li>
-            <li><strong>Machine Learning &amp; AI:</strong> TensorFlow, PyTorch, Scikit-learn, NumPy, Pandas, OpenCV</li>
-            <li><strong>Hardware &amp; Embedded Systems:</strong> Arduino, Atmega Microcontrollers</li>
-            <li><strong>Languages:</strong> Persian (Native), English (Proficient)</li>
-            </ul>
-            <br>
-
-            <h5 id="certificates">Certificates</h5>
-            <ul class="list-disc cvindent text-gray-700 space-y-2">
-            <li>TOEFL iBT (107/120)</li>
-            <li>Mathematics for Machine Learning | Coursera</li>
-            <li>Web development using JQuery | Sololearn</li>
-            </ul>
-            <br>
-
-            <h5 id="professional-memberships">Professional Memberships</h5>
-            <ul class="list-disc cvindent text-gray-700 space-y-2">
-            <li>Artificial Intelligence Association, Islamic Azad University - Tehran North Branch</li>
-            <li>Former Member, National Full-Contact Team</li>
-            </ul>
-            <br>
-
-            <h5 id="hobbies">Hobbies</h5>
-            <ul class="list-disc cvindent text-gray-700 space-y-2">
-            <li>Playing guitar, weight training, board games, and watching tech and science documentaries.</li>
-            </ul>
+    <!-- Eggs Complete Modal -->
+    <div id="eggWinModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 px-4">
+        <div class="cvbox w-full max-w-2xl rounded-2xl shadow-xl p-6 md:p-8 relative text-center">
+            <button id="closeEggWinModal" class="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold" aria-label="Close">&times;</button>
+            <h3 class="card-header-text headtext font-bold mb-4">Nice attention to detail - you're clearly curious.</h3>
+            <p class="subtext mb-2">You seem like someone I should meet. Feel free to contact me. 😉</p>
         </div>
     </div>
 
 
 
 
+
     <script>
-        const cvModal = document.getElementById('cvModal');
-        const openCvModal = document.getElementById('openCvModal');
-        const closeCvModal = document.getElementById('closeCvModal');
+        (() => {
+            const storageKey = 'eggs_found_v1';
+            const toast = document.getElementById('egg-toast');
+            const eggIds = [1, 2, 3];
+            const root = document.documentElement;
+            const eggWinModal = document.getElementById('eggWinModal');
+            const closeEggWinModal = document.getElementById('closeEggWinModal');
 
-        openCvModal.addEventListener('click', () => {
-            cvModal.classList.remove('hidden');
-            cvModal.classList.add('flex');
-        });
+            const getFound = () => {
+                try {
+                    return JSON.parse(localStorage.getItem(storageKey)) || [];
+                } catch {
+                    return [];
+                }
+            };
 
-        closeCvModal.addEventListener('click', () => {
-            cvModal.classList.add('hidden');
-            cvModal.classList.remove('flex');
-        });
+            const setFound = (arr) => {
+                localStorage.setItem(storageKey, JSON.stringify(arr));
+            };
 
-        // Close modal when clicking outside the content
-        cvModal.addEventListener('click', (e) => {
-            if (e.target === cvModal) {
-            cvModal.classList.add('hidden');
-            cvModal.classList.remove('flex');
+            const syncEggMode = (foundSet) => {
+                const foundCount = foundSet ? foundSet.size : getFound().length;
+                root.classList.toggle('egg-mode', foundCount >= eggIds.length);
+            };
+
+            let toastTimer;
+            const showToast = (message) => {
+                if (!toast) return;
+                toast.textContent = message;
+                toast.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+            };
+
+            const markFound = (id) => {
+                const found = new Set(getFound());
+                if (found.has(id)) return;
+
+                found.add(id);
+                const count = found.size;
+                setFound([...found]);
+
+                if (count < eggIds.length) {
+                    showToast(`Found ${count}/${eggIds.length} - ${eggIds.length - count} more to go`);
+                } else {
+                    showToast('You found them all.');
+                    if (eggWinModal) {
+                        eggWinModal.classList.remove('hidden');
+                        eggWinModal.classList.add('flex');
+                    }
+                }
+                syncEggMode(found);
+
+                const egg = document.querySelector(`.egg-${id}`);
+                if (egg) egg.style.display = 'none';
+            };
+
+            eggIds.forEach((id) => {
+                const egg = document.querySelector(`.egg-${id}`);
+                if (!egg) return;
+                egg.addEventListener('click', () => markFound(id));
+            });
+
+            const resetEggsButton = document.getElementById('reset-eggs');
+            if (resetEggsButton) {
+                resetEggsButton.addEventListener('click', () => {
+                    localStorage.removeItem(storageKey);
+                    syncEggMode(new Set());
+                    eggIds.forEach((id) => {
+                        const egg = document.querySelector(`.egg-${id}`);
+                        if (egg) egg.style.display = '';
+                    });
+                    showToast('Egg progress reset');
+                });
             }
-        });
+
+            if (closeEggWinModal && eggWinModal) {
+                closeEggWinModal.addEventListener('click', () => {
+                    eggWinModal.classList.add('hidden');
+                    eggWinModal.classList.remove('flex');
+                });
+                eggWinModal.addEventListener('click', (e) => {
+                    if (e.target === eggWinModal) {
+                        eggWinModal.classList.add('hidden');
+                        eggWinModal.classList.remove('flex');
+                    }
+                });
+            }
+
+            window.addEventListener('DOMContentLoaded', () => {
+                const found = new Set(getFound());
+                syncEggMode(found);
+                eggIds.forEach((id) => {
+                    if (!found.has(id)) return;
+                    const egg = document.querySelector(`.egg-${id}`);
+                    if (egg) egg.style.display = 'none';
+                });
+            });
+        })();
     </script>
 
 </body>
